@@ -61,7 +61,7 @@ header {
   font-size: 0.9rem;
 }
 
-/* =================MEDIA QUERIES (MEDIAM DEVICES)===================== */
+/* ================= MEDIA QUERIES (MEDIAM DEVICES) ===================== */
 
 @media screen and (max-width: 1024px) {
   header {
@@ -69,7 +69,7 @@ header {
   }
 }
 
-/* =================MEDIA QUERIES (MEDIAM DEVICES)===================== */
+/* ================= MEDIA QUERIES (MEDIAM DEVICES) ===================== */
 
 @media screen and (max-width: 600px) {
   header {
