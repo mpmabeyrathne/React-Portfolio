@@ -13,11 +13,13 @@ const About = () => {
 
       <div className="container about_container">
         <div className="about_me">
-          <img src={ME} alt="" />
+          <div className="about_me-image">
+            <img src={ME} alt="" />
+          </div>
         </div>
 
         <div className="about_content">
-          <div className="abour_cards">
+          <div className="about_cards">
             <article className="about_card">
               <FaAward className="about_icon" />
               <h5>Experience</h5>
@@ -34,6 +36,15 @@ const About = () => {
               <small>8+ completed projects</small>
             </article>
           </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+            voluptate expedita dolore temporibus necessitatibus animi omnis
+            nobis. Dolore recusandae esse odio porro voluptatibus magnam tenetur
+            vel delectus in, sint minima?
+          </p>
+          <a href="#contact" className="btn btn-primary">
+            Let's Talk
+          </a>
         </div>
       </div>
     </section>
