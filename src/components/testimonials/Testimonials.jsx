@@ -5,30 +5,35 @@ import AVTR2 from "../../assets/avatar2.jpg";
 import AVTR3 from "../../assets/avatar3.jpg";
 import AVTR4 from "../../assets/avatar4.jpg";
 
+// import Swiper core and required modules
+import { Pagination, Navigation } from "swiper/modules";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
 const data = [
   {
-    id: 1,
     image: AVTR1,
     name: "Ernest Achiever",
     review:
       " Lorem ipsum, dolor sit amet consectetur adipisicing elit.Similique ducimus repellendus quo repudiandae ab suscipit ad magni laudantium, nobis, velit placeat vero totam cumque veritatis porroquas quaerat minima rerum.",
   },
   {
-    id: 2,
     image: AVTR2,
     name: "Ernest Achiever",
     review:
       " Lorem ipsum, dolor sit amet consectetur adipisicing elit.Similique ducimus repellendus quo repudiandae ab suscipit ad magni laudantium, nobis, velit placeat vero totam cumque veritatis porroquas quaerat minima rerum.",
   },
   {
-    id: 3,
     image: AVTR3,
     name: "Ernest Achiever",
     review:
       " Lorem ipsum, dolor sit amet consectetur adipisicing elit.Similique ducimus repellendus quo repudiandae ab suscipit ad magni laudantium, nobis, velit placeat vero totam cumque veritatis porroquas quaerat minima rerum.",
   },
   {
-    id: 4,
     image: AVTR4,
     name: "Ernest Achiever",
     review:
@@ -42,19 +47,26 @@ const Testimonials = () => {
       <h5>Review from clients</h5>
       <h2>Testimonials</h2>
 
-      <div className="div container testimonials_container">
-        {data.map(({ id, name, image, review }) => {
+      <Swiper
+        className="container testimonials_container"
+        // install Swiper modules
+        modules={[Pagination]}
+        spaceBetween={40}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+      >
+        {data.map(({ id, name, image, review }, index) => {
           return (
-            <article key={id} className="testimonial">
+            <SwiperSlide key={index} className="testimonial">
               <div className="client_avatar">
-                <img src={image} alt="Avatar one" />
-                <h5 className="client_name">{name}</h5>
-                <small className="client_review">{review}</small>
+                <img src={image} alt="" />
               </div>
-            </article>
+              <h5 className="client_name">{name}</h5>
+              <small className="client_review">{review}</small>
+            </SwiperSlide>
           );
         })}
-      </div>
+      </Swiper>
     </section>
   );
 };
