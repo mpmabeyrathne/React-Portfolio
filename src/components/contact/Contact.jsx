@@ -15,7 +15,7 @@ const Contact = () => {
 
         <div className="contact_options">
           <article className="contact_option">
-            <MdOutlineMailOutline />
+            <MdOutlineMailOutline className="contact_option-icon" />
             <h4>Email</h4>
             <h5>pasindumaduwantha2019@gmail.com</h5>
             <a href="mailto:pasindumaduwantha2019@gmail.com" target="__blank">
@@ -23,7 +23,7 @@ const Contact = () => {
             </a>
           </article>
           <article className="contact_option">
-            <RiMessengerLine />
+            <RiMessengerLine className="contact_option-icon" />
             <h4>Messenger</h4>
             <h5>Pasindu Maduwantha</h5>
             <a href="https://m.me/pasindu.maduwantha.3150" target="__blank">
@@ -31,7 +31,7 @@ const Contact = () => {
             </a>
           </article>
           <article className="contact_option">
-            <BsWhatsapp />
+            <BsWhatsapp className="contact_option-icon" />
             <h4>WhatsApp</h4>
             <h5>+94788193729</h5>
             <a
