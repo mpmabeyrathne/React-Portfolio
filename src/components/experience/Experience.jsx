@@ -49,6 +49,10 @@ const Experience = () => {
                 <h4>React</h4>
                 <small className="text-light">Experience</small>
               </div>
+              <div>
+                <h4>Angular</h4>
+                <small className="text-light">Experience</small>
+              </div>
             </article>
           </div>
         </div>
